@@ -5,7 +5,7 @@ BUILD_DIR := build
 SIM := $(BUILD_DIR)/fifo_sim.vvp
 .PHONY: all run wave clean
 all: run
-$(SIM): rtl/sync_fifo.v tb/tb_sync_fifo.sv
+$(SIM): RTL/sync_fifo.v tb/tb_sync_fifo.sv
 	mkdir -p $(BUILD_DIR)
 	$(IVERILOG) -Wall -g2012 -s tb_sync_fifo -o $(SIM) $^
 run: $(SIM)
