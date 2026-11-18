@@ -462,7 +462,7 @@ The waveform illustrates FIFO occupancy, pointer movement, accepted read/write t
 ```text
 Synchronous-FIFO-RTL-Verification/
 |
-|-- rtl/
+|-- RTL/
 |   |-- sync_fifo.v
 |
 |-- tb/
@@ -518,7 +518,7 @@ mkdir -p build
 iverilog -Wall -g2012 \
     -s tb_sync_fifo \
     -o build/fifo_sim \
-    rtl/sync_fifo.v \
+    RTL/sync_fifo.v \
     tb/tb_sync_fifo.sv
 
 vvp build/fifo_sim
